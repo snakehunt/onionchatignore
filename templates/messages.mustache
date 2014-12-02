@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <meta http-equiv="refresh" content="{{refresh}}" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+  </head>
+  <body>
+    <table id="messages" class="pure-table" style="border: 0px;">
+      {{#messages}}
+        <tr style="border: 0px;">
+          <td class="time" style="border: 0px;"><i style="color: #bbbbbb">{{time}}</i></td>
+          {{#user}}
+          <td class="user" style="border: 0px;"><b>{{user}}:</b></td>
+          <td class="message" style="border: 0px;">{{message}}</td>
+          {{/user}}
+          {{^user}}
+          <td colspan="2" style="border: 0px;"><em style="color: #cccccc">{{message}}</em></td>
+          {{/user}}
+        </tr>
+      {{/messages}}
+    </table>
+    <a name="bottom"></a>
+  </body>
+</html> 

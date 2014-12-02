@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+      <meta http-equiv="refresh" content="{{refresh}}" />
+      <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+  </head>
+  <body style="margin: 12px; background: #eeeeee;">
+    <a href="/" target="_top">
+      <img src="https://github-camo.global.ssl.fastly.net/e065f7ca8c1eda7d19ad8c2b9278e05264638e65/687474703a2f2f692e696d6775722e636f6d2f6c51706f417a4c2e706e67" width="118" />
+    </a>
+    <h3 id="room">#{{room}}</h3>
+    <table id="users">
+      {{#users}}
+        <tr class="user">
+          <td class="name">@{{name}}</td>
+          <td class="ip"><i>{{ip}}</i></td>
+        </tr>
+      {{/users}}
+    </table>
+	 {{#room}}
+	<h4>Ignore Users</h4>
+	 <form class="pure-form" action="/{{room}}/users" method="post">
+	<select name="ignored_user">
+	<option></option>
+	{{#users}}
+		<option class="name" value="{{name}}">{{name}}</option>
+	{{/users}}
+	</select>
+	 <input type="hidden" name="ip" value="{{ip}}" />
+	 <input type="submit" value="Ignore" class="pure-button pure-button-primary" /></form>
+	</form>
+
+	<h4>Unignore Users</h4>
+	<form class="pure-form" action="/{{room}}/users" method="post">
+	<select name="ignored_user">
+	<option></option>
+	{{#users}}
+		<option class="name" value="{{name}}">{{name}}</option>
+	{{/users}}
+	</select>
+	 <input type="hidden" name="unignore" value="true" />
+	 <input type="hidden" name="ip" value="{{ip}}" />
+	 <input type="submit" value="Unignore" class="pure-button pure-button-primary" /></form>
+	</form>
+
+	{{/room}}
+	
+  </body>
+</html> 

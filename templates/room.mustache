@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <title>OnionChat: {{room}}</title>
+    <link rel="shortcut icon" type="image/gif" href="/assets/img/favicon.gif" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+  </head>
+  <frameset rows="*,70px">
+    <frameset cols="140px,*">
+      <frame frameborder="0" marginwidth="2" noresize="noresize" src="/{{room}}/users" />
+      <frame frameborder="0" noresize="noresize" src="/{{room}}/messages#bottom" />
+    </frameset>
+    <frame frameborder="0" marginheight="2" noresize="noresize" src="/buffer?room={{room}}" />
+  </frameset>
+</html> 

@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+*.sqlite
+*.rdb
+*.sqp
+config.ini
+mongrel2.conf
+build/*
+run/*
+log/*

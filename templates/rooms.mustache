@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <meta http-equiv="refresh" content="{{refresh}}" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" />
+  </head>
+  <body style="margin: 12px;">
+    
+    <div>
+      <img src="https://github-camo.global.ssl.fastly.net/e065f7ca8c1eda7d19ad8c2b9278e05264638e65/687474703a2f2f692e696d6775722e636f6d2f6c51706f417a4c2e706e67" alt="logo" width="118" style="margin: 12px" />
+      <h1>OnionChat</h1>
+      <h2>Anonymous real-time chat. No JavaScript.</h2>
+    </div>
+    <hr noshade="noshade" size="1" width="100%">
+    <table id="rooms" style="margin: 12px; background: #ffffff;">
+      {{#rooms}}
+        <tr class="room">
+          <td class="name"><a target="_top" href="/{{name}}/">#{{name}}</a></td>
+          <td class="length"><i>{{length}}</i></td>
+		  <td class="users"><i>({{users}})</i></td>
+        </tr>
+      {{/rooms}}
+    </table>
+
+    <h5><a href="http://github.com/Miserlou/OnionChat" target="_blank">Show me the code!</a></h5>
+
+  </body>
+</html>
